@@ -11,7 +11,7 @@ public:
   // state covariance matrix
   Eigen::MatrixXd P_;
 
-  // state transistion matrix
+  // state transition matrix
   Eigen::MatrixXd F_;
 
   // process covariance matrix
@@ -22,6 +22,9 @@ public:
 
   // measurement covariance matrix
   Eigen::MatrixXd R_;
+
+  //Difference between predicted and measured state
+  Eigen::VectorXd y;
 
   /**
    * Constructor
@@ -63,7 +66,11 @@ public:
    * @param z The measurement at k+1
    */
   void UpdateEKF(const Eigen::VectorXd &z);
-
+  
+  /**
+   * Updates the matrix y from the Update and UpdateEKF functions
+   */
+  void MeasUpdate(const Eigen::VectorXd &y);
 };
 
 #endif /* KALMAN_FILTER_H_ */
