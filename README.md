@@ -15,6 +15,7 @@ Once the install for uWebSocketIO is complete, the main program can be built and
 4. make
 5. ./ExtendedKF
 
+For any guidance my tutore please watch this video [Self-DrivingCarProject|ExtendedKalmanFilters](https://youtu.be/J7WK9gEUltM)
 Tips for setting up your environment can be found in the classroom lesson for this project.
 
 Note that the programs that need to be written to accomplish the project are src/FusionEKF.cpp, src/FusionEKF.h, kalman_filter.cpp, kalman_filter.h, tools.cpp, and tools.h
